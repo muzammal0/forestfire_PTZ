@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+    <link href="static/css/toggle.css" rel="stylesheet">
+
+</head>
+
+<body>
+<div><h3>Camera Inspector</h3>
+    <div style="float: left; width: 25%;white-space: nowrap;">
+        <p>Live Swtich</p>
+        <label class="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+        </label>
+        <p>PTZ Controls</p>
+        <div style="float: left; width: 50%;">
+            PAN <input max="200" min="0" oninput="panrangeValue.innerText = this.value" type="range" value="100">
+            <p id="panrangeValue">10</p>
+            ZOOM <input max="200" min="0" oninput="zoomrangeValue.innerText = this.value" type="range" value="100">
+            <p id="zoomrangeValue">10</p>
+        </div>
+        <div style="float: right;">
+        <div style="float: left; width: 10%"><input max="200" min="0" oninput="tiltrangeValue.innerText = this.value"
+                                                      style="-webkit-appearance: slider-vertical" type="range"
+                                                      value="100">
+
+        </div>
+            <div style="float: right;width: 50% ;"><p style=" white-space: nowrap;"> TILT <p  id="tiltrangeValue">10</p> </p> </div>
+        </div>
+
+
+    </div>
+</div>
+<div style="float: right; width: 75%;"><img id="liveimg"
+                                                            src="https://api.tpilums.org.pk/media/wwf/staging_camera/2023-01-17/1673981650470.jpg">
+</div>
+
+<form action="publish">
+    PAN:<input name = pan type = text><br>
+    TILT : <input name = tilt type = text><br>
+    Zoom :  <input name = zoom type = text><br>
+    <input type="submit"> </form>
+
+</div>
+
+</body>
+
+</html>
